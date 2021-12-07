@@ -1,0 +1,119 @@
+{% extends "base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+        <div class="content-section">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Take Assessment </legend>
+                </fieldset>
+                <fieldset>
+                <div class="radiobuttons">
+                    <p>What age group belong to?</p>
+                    <ul style="list-style:none;">
+                        <li class="radio">
+                            <input name="age" value="Below 18" type="radio" class="userRatings">
+                            <label>Below 18</label>
+                        </li>
+                        <li class="radio">
+                            <input name="age" value="18 to 60" type="radio" class="userRatings">
+                            <label>18 to 60</label>
+                            </li>
+                            <li class="radio">
+                                <input name="age" value="Above 60" type="radio" class="userRatings">
+                                <label>Above 60</label>
+                                </li>
+                             </ul>
+                             </div>
+                            </fieldset>
+                            <fieldset>
+                             <div class="radiobuttons">
+                                <p>Choose one of the options you have taken vaccine</p>
+                                <ul style="list-style:none;">
+                                    <li class="radio">
+                                        <input name="vaccine" value="Pfizer-BioNTech" type="radio" class="userRatings">
+                                        <label>Pfizer</label>
+                                    </li>
+                                    <li class="radio">
+                                        <input name="vaccine" value="Moderna" type="radio" class="userRatings">
+                                        <label>Moderna</label>
+                                    </li>
+                                    <li class="radio">
+                                        <input name="vaccine" value="johnson&johnson's janssen" type="radio" class="userRatings">
+                                        <label>johnson&johnson's janssen</label>
+                                    </li>
+                                </ul>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="radiobuttons">
+                                        <p>Have you ever had any fatal diseases(cancer,diabetes,hypertension)?</p>
+                                        <ul style="list-style:none;">
+                                            <li class="radio">
+                                                <input name="chronic" value="Yes" type="radio" class="userRatings">
+                                                <label>Yes</label>
+                                            </li>
+                                            <li class="radio">
+                                                <input name="chronic" value="No" type="radio" class="userRatings">
+                                                <label>No</label>
+                                            </li>
+                                            </ul>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="radiobuttons">
+                                                <p>Do you have redness or tenderness where the shot was given after 24 hours?</p>
+                                                <ul style="list-style:none;">
+                                                    <li class="radio">
+                                                        <input name="tenderness" value="Yes" type="radio" class="userRatings">
+                                                        <label>Yes</label>
+                                                    </li>
+                                                    <li class="radio">
+                                                        <input name="tenderness" value="No" type="radio" class="userRatings">
+                                                        <label>No</label>
+                                                        </li>
+                                                        </ul>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <div class="radiobuttons">
+                                                            <p>Are you suffering from anyone of the symptoms Fever,Headache,Nausea?</p>
+                                                            <ul style="list-style:none;">
+                                                                <li class="radio">
+                                                                    <input name="symptoms" value="yes" type="radio" class="userRatings">
+                                                                    <label>Yes</label>
+                                                                </li>
+                                                                <li class="radio">
+                                                                    <input name="symptoms" value="No" type="radio" class="userRatings">
+                                                                    <label>No</label>
+                                                                </li>
+                                                                </ul>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <div class="radiobuttons">
+                                                            <p>Are you feelinng Tierdness and Muscle pain?</p>
+                                                            <ul style="list-style:none;">
+                                                                <li class="radio">
+                                                                    <input name="feeling" value="yes" type="radio" class="userRatings">
+                                                                    <label>Yes</label>
+                                                                </li>
+                                                                <li class="radio">
+                                                                    <input name="feeling" value="No" type="radio" class="userRatings">
+                                                                    <label>No</label>
+                                                                </li>
+                                                                </ul>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <div>
+                                                            <button id="submit" type="submit"class="btn btn-outline-info style="float:right">submit</button>
+                                                        </div>
+                                                    </fieldset>
+                                                    <div class="border-top pt-3">
+                                                        <small class= "text-muted">
+                                                           Re-Assess Again? <a class="ml-2" href="{% url 'Assessment' %}">Take Assessment</a>
+                                                        </small>
+                                                    </div>
+                                                    
+{% endblock %}

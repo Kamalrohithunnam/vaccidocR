@@ -1,0 +1,70 @@
+{% extends "base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <h1>Condition Analysis</h1>
+    <h2>{{message}}</h2>
+    <br></br>
+
+    {% if score >= 3 %}
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Treatment</h5>
+                    <p class="card-text"> Find the nearby hospital for treatment</p>
+                    <a href="https://www.rvsq.gouv.qc.ca/en/public/Pages/home.aspx" class="ml-2">Know more..</a>
+                </div>
+                </div>
+            </div>
+        </div>    
+            
+     <!-- {% else %}
+        <h2>Medication Suggestions</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Redness or tenderness</h5>
+                    <p class="card-text">Apply cool wet cloth over the area. </p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br></br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Fever or Body ache</h5>
+                        <p class="card-text">Ibuprofen/Aspirin</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <br></br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cold</h5>
+                            <p class="card-text">Sudafed PE sinus</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cough</h5>
+                                <p class="card-text">Mucinex</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+           -->
+    {% endif %}  
+    <br></br>                  
+{% endblock content %}
